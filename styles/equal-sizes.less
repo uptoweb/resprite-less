@@ -1,0 +1,49 @@
+@import "../lib/resprite";
+
+body {
+    background-color: #f3f3f3;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+h2 {
+    text-align: center;
+}
+
+.row-fluid {
+    margin: 0 auto;
+    width: 90%;             /* any responsive width */
+}
+
+/*Columns or grids are the same containers and can have any sizes*/
+.col {
+    float: left;
+    width: 47%;
+    margin-right: 6%;
+    font-family: "Titillium Web", sans-serif;
+    text-align: center;
+}
+
+.last {
+    margin-right: 0;
+}
+
+
+/*Below resprite.less calculates properties*/
+.img1,
+.img2 {
+    .rs-eq-gen("../img/spr-col.png", 382, 556, 322, 238);
+}
+
+.img1 {
+    .rs-eq-ind(382, 556, 322, 238, 40, 42);
+}
+
+.img2 {
+    .rs-eq-ind(382, 556, 322, 238, 40, 298);
+}
+

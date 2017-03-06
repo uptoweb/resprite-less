@@ -1,0 +1,37 @@
+/*!
+ * resprite.less v1.0.0 -- responsive background images from sprite (collection of LESS mixins)
+ *
+ * license: MIT
+ * author: uptoweb
+ * http://uptoweb.info/resprite-less
+ */
+
+.rs(@spr-url, @spr-width, @spr-height, @img-width, @img-height, @x, @y, @round: 2) {
+    background: url(@spr-url) round(percentage(@x / (@spr-width - @img-width)), @round) round(percentage(@y / (@spr-height - @img-height)), @round);
+    background-size: round(percentage(@spr-width / @img-width), @round) round(percentage(@spr-height / @img-height), @round);
+    padding-top: round(percentage(@img-height / @img-width), @round);
+    width: 100%;
+}
+
+.rs-eq-gen(@spr-url, @spr-width, @spr-height, @img-width, @img-height, @round: 2) {
+    background-image: url(@spr-url);
+    background-size: round(percentage(@spr-width / @img-width), @round) round(percentage(@spr-height / @img-height), @round);
+    padding-top: round(percentage(@img-height / @img-width), @round);
+    width: 100%;
+}
+
+.rs-eq-ind(@spr-width, @spr-height, @img-width, @img-height, @x, @y, @round: 2) {
+    background-position: round(percentage(@x / (@spr-width - @img-width)), @round) round(percentage(@y / (@spr-height - @img-height)), @round);
+}
+
+// Note: @spr-width: 0 AND @spr-height: 0 are no used here, but were added for intuitive input
+.rs-dif-gen(@spr-url, @spr-width: 0, @spr-height: 0, @round: 2) {
+    background-image: url(@spr-url);
+    width: 100%;
+}
+
+.rs-dif-ind(@spr-width, @spr-height, @img-width, @img-height, @x, @y, @round: 2) {
+    background-size: round(percentage(@spr-width / @img-width), @round) round(percentage(@spr-height / @img-height), @round);
+    background-position: round(percentage(@x / (@spr-width - @img-width)), @round) round(percentage(@y / (@spr-height - @img-height)), @round);
+    padding-top: round(percentage(@img-height / @img-width), @round);
+}

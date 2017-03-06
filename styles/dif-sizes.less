@@ -1,0 +1,38 @@
+@import "../lib/resprite";
+
+body {
+    background-color: #f3f3f3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container1,
+.container2 {
+    /* containers can have any width, margin, padding, box-sizing, etc*/
+    margin: 0 auto;
+}
+
+.container1 {
+    width: 50%;
+}
+
+.container2 {
+    width: 40%;
+}
+
+
+/*Below resprite.less calculates properties*/
+.img1,
+.img2 {
+    .rs-dif-gen("../img/spr.png");
+}
+
+.img1 {
+    .rs-dif-ind(382, 556, 322, 238, 40, 42);
+}
+
+.img2 {
+    .rs-dif-ind(382, 556, 260, 226, 102, 310);
+}

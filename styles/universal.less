@@ -1,0 +1,37 @@
+@import "../lib/resprite";
+
+body {
+    background-color: #f3f3f3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container1,
+.container2 {
+    /* containers can have any width, margin, padding, box-sizing, etc*/
+    margin: 0 auto;
+}
+
+.container1 {
+    width: 50%;
+}
+
+.container2 {
+    width: 40%;
+}
+
+/*Below resprite.less calculates properties*/
+
+/* .rs mixin is universal, because it shall be work in all situations. You can use it anywhere and then (if you'll want) rearrange repeating CSS properties manually */
+.img1 {
+    .rs("../img/spr.png", 382, 556, 322, 238, 40, 42);
+}
+
+.img2 {
+    .rs("../img/spr.png", 382, 556, 260, 226, 102, 310);
+}
+
+/* But if you want already grouped CSS code,
+   you need to use another mixins from resprite.less (see another examples) */

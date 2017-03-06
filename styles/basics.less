@@ -1,0 +1,35 @@
+@import "../lib/resprite";
+
+body {
+    background-color: #f3f3f3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;             /* any responsive width */
+}
+
+/*  Below resprite.less calculates properties  */
+
+/*
+    Initial data:
+    1. @spr-url = "../img/spr.png"
+    2. @spr-width = 382px;
+    3. @spr-height = 556px;
+    4. @img1-width = 322px;
+    5. @img1-height = 238px;
+    6. @x1 = 40px;
+    7. @y1 = 42px;
+
+.img1 {
+    .rs(@spr-url, @spr-width, @spr-height, @img1-width, @img1-height, @x1, @y1);
+}
+*/
+
+.img1 {
+    .rs("../img/spr.png", 382, 556, 322, 238, 40, 42);
+}
